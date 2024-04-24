@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+:root {
+  --primary: #1677ff;
+  --peace: #fff;
+  --text: #000;
+  --warning: #fcba03;
+  --info: #3a86ff;
+  --error: #ff006e;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container {
+  max-width: calc(100% - 32px);
+  margin: 16px auto;
   display: flex;
-  flex-direction: column;
+}
+
+.side-panel-container {
+  margin: 16px;
+  width: 25%;
+
+}
+
+.hero-container {
+  width: 75%;
+  margin: 16px;
+}
+
+/* Sidebar Container */
+.sidebar-content {
+  padding: 0 18px;
+  box-shadow: 0px 2px 16px 0px #00000014;
+  background-color: var(--peace);
+  margin: 16px 0;
+}
+
+.logo {
+  color: var(--primary);
+  font-family: cursive;
+  margin: 0;
+}
+
+.sidebar-content-list>h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.sidebar-content-child-list ul li {
+  list-style-type: none;
+  padding-bottom: 8px;
+}
+
+.sidebar-content-child-list ul li a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.levels {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+
+
+.hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  background-color: var(--peace);
+  border-radius: 2px;
+  border: 1px solid var(--text);
+  border: 1px solid var(--peace);
+  cursor: pointer;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="checkbox"]:after {
+  content: "\2714";
+  font-size: 12px;
+  display: none;
+  color: var(--warning);
+  color: var(--text);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+input[type="checkbox"]:checked {
+  background-color: white;
+}
+
+/* Hero container */
+.hero-container-history {
+  box-shadow: 0px 2px 16px 0px #00000014;
+  background-color: var(--peace);
+  padding: 0 18px;
+  margin: 16px 0;
+}
+
+.level-btn {
+  padding: 8px 12px;
+  border: 1px solid var(--piece);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.warning {
+  background-color: var(--warning);
+  color: var(--peace);
+}
+
+.error {
+  background-color: var(--error);
+  color: var(--peace);
+}
+
+.info {
+  background-color: var(--info);
+  color: var(--peace);
 }
