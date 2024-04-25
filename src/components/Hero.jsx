@@ -1,156 +1,103 @@
 import React, { useState, useEffect } from 'react'
-import { AutoComplete, Input, Table } from 'antd'
+import { AutoComplete, Input } from 'antd'
+import Accesslogs from '../pages/Accesslogs';
+import Errorlogs from '../pages/Errorlogs';
+import Attacklogs from '../pages/Attacklogs';
 import axios from 'axios';
-import '../App.css'
 
-function Hero() {
+function Hero({ logType }) {
+    const getRandomInt = (max, min = 0) => Math.floor(Math.random() * (max - min + 1)) + min;
+    const searchResult = (query) =>
+        new Array(getRandomInt(5))
+            .join('.')
+            .split('.')
+            .map((_, idx) => {
+                const category = `${query}${idx}`;
+                return {
+                    value: category,
+                    label: (
+                        <div
+                            style={{
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                            }}
+                        >
+                            <span>
+                                Found {query} on{' '}
+                                <a
+                                    href={`https://s.taobao.com/search?q=${query}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {category}
+                                </a>
+                            </span>
+                            <span>{getRandomInt(200, 100)} results</span>
+                        </div>
+                    ),
+                };
+            });
     const [options, setOptions] = useState([]);
-    const [data, setData] = useState([])
-    const [activeButton, setActiveButton] = useState(null);
-    const [searchKeyword, setSearchKeyword] = useState('');
+    const [accessLogs, setAccessLogs] = useState([]);
+    const [errorLogs, setErrorLogs] = useState([]);
+    const [attackLogs, setAttackLogs] = useState([]);
 
-    // Fetching api
-    useEffect(() => {
-        axios.get('http://localhost:8000/accesslogs')
-            .then(res => setData(res.data))
-            .catch(err => console.log(err))
-        console.log(data)
-    }, [])
-
-    // Generate search results for AutoComplete options
-    const searchResult = (query) => {
-        // Dummy implementation for demonstration purposes
-        const results = data.filter(item => {
-            const searchableFields = `${item.timestamp} ${item.service} ${item.level} ${item.message}`;
-            return searchableFields.toLowerCase().includes(query.toLowerCase());
-        });
-
-        return results.map((result, idx) => ({
-            // value: `${query}${idx}`,
-            label: (
-                <div>
-                    {/* <span>Found "{query}" in:</span> */}
-                    <br />
-                    {/* <span>{result.timestamp}</span> */}
-                    {/* <span>{result.service}</span> */}
-                    <span>{result.level}</span>
-                    {/* <span>{result.message}</span> */}
-                </div>
-            ),
-        }));
-    };
-
-    // Handle search input change
     const handleSearch = (value) => {
-        setSearchKeyword(value);
         setOptions(value ? searchResult(value) : []);
     };
-
     const onSelect = (value) => {
         console.log('onSelect', value);
     };
 
-    // Table
-    const columns = [
-        {
-            title: 'Time',
-            dataIndex: 'timestamp',
-            key: 'name',
-            render: (value) => value,
-        },
-        {
-            title: 'Service',
-            dataIndex: 'service',
-            key: 'service',
-            render: (value) => value,
-        },
-        {
-            title: 'Level',
-            dataIndex: 'level',
-            key: 'level',
-            render: (value) => {
-                let style = {};
-                if (value === 'INFO') {
-                    style = { color: '#030bfc' };
-                } else if (value === 'ERROR') {
-                    style = { color: '#fc0314' };
-                } else if (value === 'WARNING') {
-                    style = { color: '#fcba03' };
-                }
+    // Fetch api
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const accessResponse = await axios.get('http://localhost:3000/accesslogs');
+                const errorResponse = await axios.get('http://localhost:3000/errorlogs');
+                const attackResponse = await axios.get('http://localhost:3000/attacklogs');
 
-                return <span style={style}>{value}</span>;
-            },
-        },
-        {
-            title: 'Message',
-            dataIndex: 'message',
-            key: 'message',
-            render: (value) => value,
-        },
-    ];
+                setAccessLogs(accessResponse.data);
+                setErrorLogs(errorResponse.data);
+                setAttackLogs(attackResponse.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
 
-    // Levels buttons
-    const handleButtonClick = (buttonType) => {
-        setActiveButton(buttonType);
-    };
+        fetchData();
+    }, []);
 
-    const getButtonClassName = (buttonType) => {
-        if (buttonType === activeButton) {
-            return `level-btn ${buttonType} active`;
-        } else {
-            return 'level-btn';
-        }
-    };
+    console.log(accessLogs)
 
-    // Filtered data based on active button
-    // const filteredData = activeButton
-    //     ? data.filter(item => item.level === activeButton.toUpperCase())
-    //     : data;
-    const filteredData = data.filter(item => {
-        return (
-            (!activeButton || item.level === activeButton.toUpperCase()) &&
-            (!searchKeyword || Object.values(item).some(value => String(value).toLowerCase().includes(searchKeyword.toLowerCase())))
-        );
-    });
     return (
         <div className='hero-content'>
             <div className="hero-header">
                 <div className="levels">
                     {/* Warning Button */}
-                    <button
-                        className={getButtonClassName('warning')}
-                        onClick={() => handleButtonClick('warning')}
-                    >
+                    <button className='level-btn warning'>
                         <input
                             type="checkbox"
                             id='warningCheck'
-                            checked={activeButton === 'warning'}
                             readOnly
                         />
                         <label htmlFor='warningCheck'>Warning</label>
                     </button>
                     {/* Info Button */}
-                    <button
-                        className={getButtonClassName('info')}
-                        onClick={() => handleButtonClick('info')}
-                    >
+                    <button className='level-btn info'>
                         <input
                             type="checkbox"
                             id='infoCheck'
-                            checked={activeButton === 'info'}
+                            // checked={activeButton === 'info'}
                             readOnly
                         />
                         <label htmlFor='infoCheck'>Info</label>
                     </button>
                     {/* Error Button */}
-                    <button
-                        className={getButtonClassName('error')}
-                        onClick={() => handleButtonClick('error')}
-                    >
+                    <button className='level-btn error'>
                         <input
                             type="checkbox"
                             id='errorCheck'
-                            checked={activeButton === 'error'}
                             readOnly
                         />
                         <label htmlFor='errorCheck'>Error</label>
@@ -172,10 +119,15 @@ function Hero() {
                 </div>
             </div>
             <div className="hero-container-history">
-                <Table dataSource={filteredData} columns={columns} />
-            </div>
+                {/* <Accesslogs data={accessLogs} />
+                <Errorlogs data={errorLogs} />
+                <Attacklogs data={attackLogs} /> */}
 
-        </div>
+                {logType === 'access' && <Accesslogs data={accessLogs} />}
+                {logType === 'error' && <Errorlogs data={errorLogs} />}
+                {logType === 'attack' && <Attacklogs data={attackLogs} />}
+            </div>
+        </div >
     )
 }
 

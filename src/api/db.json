@@ -1,0 +1,278 @@
+{
+    "accesslogs": [
+        {
+            "timestamp": "2024-04-23T10:15:30Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache server started successfully"
+        },
+        {
+            "timestamp": "2024-04-23T10:20:45Z",
+            "service": "Apache",
+            "level": "ERROR",
+            "message": "Apache configuration error"
+        },
+        {
+            "timestamp": "2024-04-23T10:25:00Z",
+            "service": "Apache",
+            "level": "WARNING",
+            "message": "High CPU usage detected"
+        },
+        {
+            "timestamp": "2024-04-23T11:30:15Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache server reloaded"
+        },
+        {
+            "timestamp": "2024-04-23T11:45:20Z",
+            "service": "Apache",
+            "level": "ERROR",
+            "message": "Disk space running low"
+        },
+        {
+            "timestamp": "2024-04-23T12:00:00Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache configuration updated"
+        },
+        {
+            "timestamp": "2024-04-23T12:15:30Z",
+            "service": "Apache",
+            "level": "WARNING",
+            "message": "Memory usage spiked"
+        },
+        {
+            "timestamp": "2024-04-23T13:30:45Z",
+            "service": "Apache",
+            "level": "ERROR",
+            "message": "Apache server crashed"
+        },
+        {
+            "timestamp": "2024-04-23T14:00:00Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache server stopped"
+        },
+        {
+            "timestamp": "2024-04-23T15:20:15Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache server restarted"
+        },
+        {
+            "timestamp": "2024-04-23T16:10:30Z",
+            "service": "Apache",
+            "level": "ERROR",
+            "message": "Critical error: database connection lost"
+        },
+        {
+            "timestamp": "2024-04-23T17:00:45Z",
+            "service": "Apache",
+            "level": "WARNING",
+            "message": "Slow response time detected"
+        },
+        {
+            "timestamp": "2024-04-23T18:30:00Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache server restarted"
+        },
+        {
+            "timestamp": "2024-04-23T19:45:20Z",
+            "service": "Apache",
+            "level": "ERROR",
+            "message": "SSL certificate expired"
+        },
+        {
+            "timestamp": "2024-04-23T20:15:30Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "New version deployed"
+        }
+    ],
+    "errorlogs": [
+        {
+            "timestamp": "2024-04-23T10:15:30Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache server started successfully"
+        },
+        {
+            "timestamp": "2024-04-23T11:30:15Z",
+            "service": "Apache",
+            "level": "WARN",
+            "message": "High CPU usage detected"
+        },
+        {
+            "timestamp": "2024-04-23T11:45:20Z",
+            "service": "Apache",
+            "level": "ERROR",
+            "message": "Disk space running low"
+        },
+        {
+            "timestamp": "2024-04-23T12:15:30Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache server restarted"
+        },
+        {
+            "timestamp": "2024-04-23T13:30:15Z",
+            "service": "Apache",
+            "level": "WARN",
+            "message": "Apache memory usage exceeded threshold"
+        },
+        {
+            "timestamp": "2024-04-23T14:00:30Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache configuration updated"
+        },
+        {
+            "timestamp": "2024-04-23T14:30:45Z",
+            "service": "Apache",
+            "level": "ERROR",
+            "message": "Apache SSL certificate expired"
+        },
+        {
+            "timestamp": "2024-04-23T15:00:00Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache module installed"
+        },
+        {
+            "timestamp": "2024-04-23T15:30:15Z",
+            "service": "Apache",
+            "level": "WARN",
+            "message": "Apache worker process crashed"
+        },
+        {
+            "timestamp": "2024-04-23T16:00:20Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache server started on port 80"
+        },
+        {
+            "timestamp": "2024-04-23T16:30:00Z",
+            "service": "Apache",
+            "level": "ERROR",
+            "message": "Apache HTTP request timeout"
+        },
+        {
+            "timestamp": "2024-04-23T17:00:30Z",
+            "service": "Apache",
+            "level": "WARN",
+            "message": "Apache cache cleared"
+        },
+        {
+            "timestamp": "2024-04-23T17:15:45Z",
+            "service": "Apache",
+            "level": "ERROR",
+            "message": "Apache server crashed"
+        },
+        {
+            "timestamp": "2024-04-23T17:30:00Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache logs rotated"
+        },
+        {
+            "timestamp": "2024-04-23T18:00:15Z",
+            "service": "Apache",
+            "level": "ERROR",
+            "message": "Apache configuration syntax error"
+        }
+    ],
+    "attacklogs": [
+        {
+            "timestamp": "2024-04-23T18:30:30Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache server configuration reloaded"
+        },
+        {
+            "timestamp": "2024-04-23T19:00:45Z",
+            "service": "Apache",
+            "level": "WARN",
+            "message": "Apache virtual host misconfiguration detected"
+        },
+        {
+            "timestamp": "2024-04-23T19:30:00Z",
+            "service": "Apache",
+            "level": "ERROR",
+            "message": "Apache SSL handshake failure"
+        },
+        {
+            "timestamp": "2024-04-23T20:00:15Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache server stopped"
+        },
+        {
+            "timestamp": "2024-04-23T20:30:30Z",
+            "service": "Apache",
+            "level": "ERROR",
+            "message": "Apache memory leak detected"
+        },
+        {
+            "timestamp": "2024-04-23T21:00:45Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache server status page accessed"
+        },
+        {
+            "timestamp": "2024-04-23T21:30:00Z",
+            "service": "Apache",
+            "level": "WARN",
+            "message": "Apache process terminated unexpectedly"
+        },
+        {
+            "timestamp": "2024-04-23T22:00:15Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache server memory usage optimized"
+        },
+        {
+            "timestamp": "2024-04-23T22:30:30Z",
+            "service": "Apache",
+            "level": "ERROR",
+            "message": "Apache configuration file not found"
+        },
+        {
+            "timestamp": "2024-04-23T23:00:45Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache server started on port 443"
+        },
+        {
+            "timestamp": "2024-04-23T23:30:00Z",
+            "service": "Apache",
+            "level": "WARN",
+            "message": "Apache directory listing enabled"
+        },
+        {
+            "timestamp": "2024-04-24T00:00:15Z",
+            "service": "Apache",
+            "level": "ERROR",
+            "message": "Apache process crashed due to high load"
+        },
+        {
+            "timestamp": "2024-04-24T00:30:30Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache server version updated"
+        },
+        {
+            "timestamp": "2024-04-24T01:00:45Z",
+            "service": "Apache",
+            "level": "ERROR",
+            "message": "Apache mod_rewrite rule syntax error"
+        },
+        {
+            "timestamp": "2024-04-24T01:30:00Z",
+            "service": "Apache",
+            "level": "INFO",
+            "message": "Apache server gracefully restarted"
+        }
+    ]
+}
