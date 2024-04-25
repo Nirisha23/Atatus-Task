@@ -1,14 +1,10 @@
 import React from 'react';
-import { Table } from 'antd';
 import Hero from '../components/Hero';
 
-function Errorlogs({ logType }) {
-
-
+function Errorlogs() {
     return (
         <div>
-            <h2>Error Logs</h2>
-            <Hero logType={logType} />
+            <Hero logType="errorlogs" />
         </div>
     );
 }

@@ -274,5 +274,373 @@
             "level": "INFO",
             "message": "Apache server gracefully restarted"
         }
+    ],
+    "startuplogs": [
+        {
+            "timestamp": "2024-04-23T10:30:15Z",
+            "service": "MySQL",
+            "level": "INFO",
+            "message": "MySQL server started successfully"
+        },
+        {
+            "timestamp": "2024-04-23T10:35:30Z",
+            "service": "MySQL",
+            "level": "ERROR",
+            "message": "MySQL connection timeout"
+        },
+        {
+            "timestamp": "2024-04-23T10:40:45Z",
+            "service": "MySQL",
+            "level": "WARNING",
+            "message": "Slow query detected"
+        },
+        {
+            "timestamp": "2024-04-23T10:45:00Z",
+            "service": "MySQL",
+            "level": "INFO",
+            "message": "Database backup completed"
+        },
+        {
+            "timestamp": "2024-04-23T10:50:15Z",
+            "service": "MySQL",
+            "level": "ERROR",
+            "message": "Database corruption detected"
+        },
+        {
+            "timestamp": "2024-04-23T10:55:30Z",
+            "service": "MySQL",
+            "level": "INFO",
+            "message": "User account created"
+        },
+        {
+            "timestamp": "2024-04-23T11:00:45Z",
+            "service": "MySQL",
+            "level": "WARNING",
+            "message": "Disk space low"
+        },
+        {
+            "timestamp": "2024-04-23T11:05:00Z",
+            "service": "MySQL",
+            "level": "ERROR",
+            "message": "Database table missing"
+        },
+        {
+            "timestamp": "2024-04-23T11:10:15Z",
+            "service": "MySQL",
+            "level": "INFO",
+            "message": "Data import completed"
+        },
+        {
+            "timestamp": "2024-04-23T11:15:30Z",
+            "service": "MySQL",
+            "level": "ERROR",
+            "message": "Database deadlock detected"
+        },
+        {
+            "timestamp": "2024-04-23T11:20:45Z",
+            "service": "MySQL",
+            "level": "WARNING",
+            "message": "Network latency high"
+        },
+        {
+            "timestamp": "2024-04-23T11:25:00Z",
+            "service": "MySQL",
+            "level": "INFO",
+            "message": "Database optimization completed"
+        },
+        {
+            "timestamp": "2024-04-23T11:30:15Z",
+            "service": "MySQL",
+            "level": "ERROR",
+            "message": "Database connection lost"
+        },
+        {
+            "timestamp": "2024-04-23T11:35:30Z",
+            "service": "MySQL",
+            "level": "INFO",
+            "message": "Database index rebuilt"
+        },
+        {
+            "timestamp": "2024-04-23T11:40:45Z",
+            "service": "MySQL",
+            "level": "WARNING",
+            "message": "Database server overloaded"
+        }
+    ],
+    "shutdownlogs": [
+        {
+            "timestamp": "2024-04-23T11:45:00Z",
+            "service": "MySQL",
+            "level": "INFO",
+            "message": "Database query executed successfully"
+        },
+        {
+            "timestamp": "2024-04-23T11:50:15Z",
+            "service": "MySQL",
+            "level": "ERROR",
+            "message": "Database connection refused"
+        },
+        {
+            "timestamp": "2024-04-23T11:55:30Z",
+            "service": "MySQL",
+            "level": "INFO",
+            "message": "Database transaction committed"
+        },
+        {
+            "timestamp": "2024-04-23T12:00:45Z",
+            "service": "MySQL",
+            "level": "WARNING",
+            "message": "Database query timeout"
+        },
+        {
+            "timestamp": "2024-04-23T12:05:00Z",
+            "service": "MySQL",
+            "level": "INFO",
+            "message": "Database table created"
+        },
+        {
+            "timestamp": "2024-04-23T12:10:15Z",
+            "service": "MySQL",
+            "level": "ERROR",
+            "message": "Database connection lost"
+        },
+        {
+            "timestamp": "2024-04-23T12:15:30Z",
+            "service": "MySQL",
+            "level": "INFO",
+            "message": "Database row updated"
+        },
+        {
+            "timestamp": "2024-04-23T12:20:45Z",
+            "service": "MySQL",
+            "level": "WARNING",
+            "message": "Database server restarted"
+        },
+        {
+            "timestamp": "2024-04-23T12:25:00Z",
+            "service": "MySQL",
+            "level": "INFO",
+            "message": "Database index optimized"
+        },
+        {
+            "timestamp": "2024-04-23T12:30:15Z",
+            "service": "MySQL",
+            "level": "ERROR",
+            "message": "Database query syntax error"
+        },
+        {
+            "timestamp": "2024-04-23T12:35:30Z",
+            "service": "MySQL",
+            "level": "INFO",
+            "message": "Database transaction rolled back"
+        },
+        {
+            "timestamp": "2024-04-23T12:40:45Z",
+            "service": "MySQL",
+            "level": "WARNING",
+            "message": "Database server stopped"
+        },
+        {
+            "timestamp": "2024-04-23T12:45:00Z",
+            "service": "MySQL",
+            "level": "INFO",
+            "message": "Database row deleted"
+        },
+        {
+            "timestamp": "2024-04-23T12:50:15Z",
+            "service": "MySQL",
+            "level": "ERROR",
+            "message": "Database query result empty"
+        },
+        {
+            "timestamp": "2024-04-23T12:55:30Z",
+            "service": "MySQL",
+            "level": "INFO",
+            "message": "Database table dropped"
+        }
+    ],
+    "ngaccesslogs": [
+        {
+            "timestamp": "2024-04-23T13:00:00Z",
+            "service": "Nginx",
+            "level": "INFO",
+            "message": "Nginx server started successfully"
+        },
+        {
+            "timestamp": "2024-04-23T13:05:15Z",
+            "service": "Nginx",
+            "level": "ERROR",
+            "message": "Nginx configuration error"
+        },
+        {
+            "timestamp": "2024-04-23T13:10:30Z",
+            "service": "Nginx",
+            "level": "WARNING",
+            "message": "High traffic detected"
+        },
+        {
+            "timestamp": "2024-04-23T13:15:45Z",
+            "service": "Nginx",
+            "level": "INFO",
+            "message": "Nginx proxy setup complete"
+        },
+        {
+            "timestamp": "2024-04-23T13:20:00Z",
+            "service": "Nginx",
+            "level": "ERROR",
+            "message": "Nginx server crashed"
+        },
+        {
+            "timestamp": "2024-04-23T13:25:15Z",
+            "service": "Nginx",
+            "level": "WARNING",
+            "message": "Nginx worker process limit reached"
+        },
+        {
+            "timestamp": "2024-04-23T13:30:30Z",
+            "service": "Nginx",
+            "level": "INFO",
+            "message": "Nginx server reloaded"
+        },
+        {
+            "timestamp": "2024-04-23T13:35:45Z",
+            "service": "Nginx",
+            "level": "ERROR",
+            "message": "Nginx SSL certificate expired"
+        },
+        {
+            "timestamp": "2024-04-23T13:40:00Z",
+            "service": "Nginx",
+            "level": "WARNING",
+            "message": "Nginx cache full"
+        },
+        {
+            "timestamp": "2024-04-23T13:45:15Z",
+            "service": "Nginx",
+            "level": "INFO",
+            "message": "Nginx access log rotated"
+        },
+        {
+            "timestamp": "2024-04-23T13:50:30Z",
+            "service": "Nginx",
+            "level": "ERROR",
+            "message": "Nginx upstream server not reachable"
+        },
+        {
+            "timestamp": "2024-04-23T13:55:45Z",
+            "service": "Nginx",
+            "level": "WARNING",
+            "message": "Nginx configuration reload failed"
+        },
+        {
+            "timestamp": "2024-04-23T14:00:00Z",
+            "service": "Nginx",
+            "level": "INFO",
+            "message": "Nginx worker process started"
+        },
+        {
+            "timestamp": "2024-04-23T14:05:15Z",
+            "service": "Nginx",
+            "level": "ERROR",
+            "message": "Nginx cache directory not writable"
+        },
+        {
+            "timestamp": "2024-04-23T14:10:30Z",
+            "service": "Nginx",
+            "level": "WARNING",
+            "message": "Nginx configuration file not found"
+        }
+    ],
+    "ngerrorlogs": [
+        {
+            "timestamp": "2024-04-23T14:15:45Z",
+            "service": "Nginx",
+            "level": "INFO",
+            "message": "Nginx server configuration reloaded"
+        },
+        {
+            "timestamp": "2024-04-23T14:20:00Z",
+            "service": "Nginx",
+            "level": "ERROR",
+            "message": "Nginx cache corruption detected"
+        },
+        {
+            "timestamp": "2024-04-23T14:25:15Z",
+            "service": "Nginx",
+            "level": "WARNING",
+            "message": "Nginx server memory leak"
+        },
+        {
+            "timestamp": "2024-04-23T14:30:30Z",
+            "service": "Nginx",
+            "level": "INFO",
+            "message": "Nginx server status page enabled"
+        },
+        {
+            "timestamp": "2024-04-23T14:35:45Z",
+            "service": "Nginx",
+            "level": "ERROR",
+            "message": "Nginx SSL handshake failed"
+        },
+        {
+            "timestamp": "2024-04-23T14:40:00Z",
+            "service": "Nginx",
+            "level": "WARNING",
+            "message": "Nginx server overload detected"
+        },
+        {
+            "timestamp": "2024-04-23T14:45:15Z",
+            "service": "Nginx",
+            "level": "INFO",
+            "message": "Nginx cache flushed"
+        },
+        {
+            "timestamp": "2024-04-23T14:50:30Z",
+            "service": "Nginx",
+            "level": "ERROR",
+            "message": "Nginx server misconfigured"
+        },
+        {
+            "timestamp": "2024-04-23T14:55:45Z",
+            "service": "Nginx",
+            "level": "WARNING",
+            "message": "Nginx SSL certificate renewal required"
+        },
+        {
+            "timestamp": "2024-04-23T15:00:00Z",
+            "service": "Nginx",
+            "level": "INFO",
+            "message": "Nginx server restarted"
+        },
+        {
+            "timestamp": "2024-04-23T15:05:15Z",
+            "service": "Nginx",
+            "level": "ERROR",
+            "message": "Nginx server not responding"
+        },
+        {
+            "timestamp": "2024-04-23T15:10:30Z",
+            "service": "Nginx",
+            "level": "WARNING",
+            "message": "Nginx cache invalidation failed"
+        },
+        {
+            "timestamp": "2024-04-23T15:15:45Z",
+            "service": "Nginx",
+            "level": "INFO",
+            "message": "Nginx access control rules updated"
+        },
+        {
+            "timestamp": "2024-04-23T15:20:00Z",
+            "service": "Nginx",
+            "level": "ERROR",
+            "message": "Nginx server firewall rule blocked"
+        },
+        {
+            "timestamp": "2024-04-23T15:25:15Z",
+            "service": "Nginx",
+            "level": "WARNING",
+            "message": "Nginx server SSL renegotiation failed"
+        }
     ]
 }
