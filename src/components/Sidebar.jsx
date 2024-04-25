@@ -10,13 +10,19 @@ function Sidebar({ onSidebarItemClick }) {
                     <h2>Apache</h2>
                     <div className="sidebar-content-child-list">
                         <ul>
-                            {/* <li><a href="#">Access </a></li>
+                            <Link to="/">Access</Link >
+                            <Link to="/errorlogs">Error Logs</Link >
+                            <Link to="/attacklogs">Attack Logs</Link >
+                        </ul>
+                        {/* <ul> */}
+                        {/* <li><a href="#">Access </a></li>
                             <li><a href="#">Error Logs</a></li>
                             <li><a href="#">Attack Logs</a></li> */}
-                            <li><a href="#" onClick={() => onSidebarItemClick('access')}>Access</a></li>
+
+                        {/* <li><a href="#" onClick={() => onSidebarItemClick('access')}>Access</a></li>
                             <li><a href="#" onClick={() => onSidebarItemClick('error')}>Error Logs</a></li>
-                            <li><a href="#" onClick={() => onSidebarItemClick('attack')}>Attack Logs</a></li>
-                        </ul>
+                            <li><a href="#" onClick={() => onSidebarItemClick('attack')}>Attack Logs</a></li> */}
+                        {/* </ul> */}
                     </div>
                 </div>
                 <div className="sidebar-content-list">

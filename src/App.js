@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Hero from './components/Hero';
 import Sidebar from './components/Sidebar';
-import { BrowserRouter, Route, Routes, Router, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Accesslogs from './pages/Accesslogs';
 import Errorlogs from './pages/Errorlogs';
 import Attacklogs from './pages/Attacklogs';
@@ -22,7 +22,11 @@ function App() {
           <Sidebar onSidebarItemClick={handleSidebarClick} />
         </div>
         <div className='hero-container'>
-          <Hero logType={logType} />
+          <Routes>
+            <Route path='/' element={<Accesslogs />} />
+            <Route path='/errorlogs' element={<Errorlogs />} />
+            <Route path='/attacklogs' element={<Attacklogs />} />
+          </Routes>
         </div>
       </div>
     </div>

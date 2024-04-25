@@ -10,35 +10,13 @@
 
 import React from 'react';
 import { Table } from 'antd';
+import Hero from '../components/Hero';
 
-function Accesslogs({ data }) {
-    const columns = [
-        {
-            title: 'Timestamp',
-            dataIndex: 'timestamp',
-            key: 'timestamp',
-        },
-        {
-            title: 'Service',
-            dataIndex: 'service',
-            key: 'service',
-        },
-        {
-            title: 'Level',
-            dataIndex: 'level',
-            key: 'level',
-        },
-        {
-            title: 'Message',
-            dataIndex: 'message',
-            key: 'message',
-        },
-    ];
+function Accesslogs({ logType }) {
 
     return (
         <div>
-            <h2>Access Logs</h2>
-            <Table dataSource={data} columns={columns} />
+            <Hero logType={logType} />
         </div>
     );
 }

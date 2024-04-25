@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { AutoComplete, Input } from 'antd'
-import Accesslogs from '../pages/Accesslogs';
-import Errorlogs from '../pages/Errorlogs';
-import Attacklogs from '../pages/Attacklogs';
+import { AutoComplete, Input, Table } from 'antd'
 import axios from 'axios';
 
 function Hero({ logType }) {
@@ -38,9 +35,9 @@ function Hero({ logType }) {
                 };
             });
     const [options, setOptions] = useState([]);
-    const [accessLogs, setAccessLogs] = useState([]);
-    const [errorLogs, setErrorLogs] = useState([]);
-    const [attackLogs, setAttackLogs] = useState([]);
+    const [dataLogs, setDataLogs] = useState([]);
+    // const [errorLogs, setErrorLogs] = useState([]);
+    // const [attackLogs, setAttackLogs] = useState([]);
 
     const handleSearch = (value) => {
         setOptions(value ? searchResult(value) : []);
@@ -54,12 +51,12 @@ function Hero({ logType }) {
         const fetchData = async () => {
             try {
                 const accessResponse = await axios.get('http://localhost:3000/accesslogs');
-                const errorResponse = await axios.get('http://localhost:3000/errorlogs');
-                const attackResponse = await axios.get('http://localhost:3000/attacklogs');
+                // const errorResponse = await axios.get('http://localhost:3000/errorlogs');
+                // const attackResponse = await axios.get('http://localhost:3000/attacklogs');
 
-                setAccessLogs(accessResponse.data);
-                setErrorLogs(errorResponse.data);
-                setAttackLogs(attackResponse.data);
+                setDataLogs(accessResponse.data);
+                // setErrorLogs(errorResponse.data);
+                // setAttackLogs(attackResponse.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -68,7 +65,29 @@ function Hero({ logType }) {
         fetchData();
     }, []);
 
-    console.log(accessLogs)
+
+    const columns = [
+        {
+            title: 'Timestamp',
+            dataIndex: 'timestamp',
+            key: 'timestamp',
+        },
+        {
+            title: 'Service',
+            dataIndex: 'service',
+            key: 'service',
+        },
+        {
+            title: 'Level',
+            dataIndex: 'level',
+            key: 'level',
+        },
+        {
+            title: 'Message',
+            dataIndex: 'message',
+            key: 'message',
+        },
+    ];
 
     return (
         <div className='hero-content'>
@@ -123,9 +142,11 @@ function Hero({ logType }) {
                 <Errorlogs data={errorLogs} />
                 <Attacklogs data={attackLogs} /> */}
 
-                {logType === 'access' && <Accesslogs data={accessLogs} />}
+                {/* {logType === 'access' && <Accesslogs data={accessLogs} />}
                 {logType === 'error' && <Errorlogs data={errorLogs} />}
-                {logType === 'attack' && <Attacklogs data={attackLogs} />}
+                {logType === 'attack' && <Attacklogs data={attackLogs} />} */}
+
+                <Table dataSource={dataLogs} columns={columns} />
             </div>
         </div >
     )
