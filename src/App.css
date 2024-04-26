@@ -53,11 +53,12 @@
   padding: 4px 0;
   margin: 12px;
   color: var(--text);
+  /* font-weight: 500; */
 }
 
-.sidebar-content-child-list a:hover {
+.sidebar-content-child-list .active-link {
   color: var(--primary);
-  transition: 0.3s;
+  font-weight: 500;
 }
 
 .levels {
