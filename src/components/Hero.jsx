@@ -21,6 +21,8 @@ function Hero({ logType }) {
 
     useEffect(() => {
         fetchData();
+        const interval = setInterval(fetchData, 5000);
+        return () => clearInterval(interval);
     }, [logType]);
 
     // Table
@@ -102,11 +104,6 @@ function Hero({ logType }) {
         setSearchKeyword(value);
         setOptions(value ? searchResult(value) : []);
     };
-
-    const onSelect = (value) => {
-        console.log('onSelect', value);
-    };
-
     return (
         <div className='hero-content'>
             <div className="hero-header">
@@ -152,7 +149,6 @@ function Hero({ logType }) {
                             width: 300,
                         }}
                         options={options}
-                        onSelect={onSelect}
                         onSearch={handleSearch}
                         size="large"
                     >

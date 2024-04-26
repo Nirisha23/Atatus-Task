@@ -1,7 +1,5 @@
 
-import React, { useState } from 'react';
-import './App.css';
-import Hero from './components/Hero';
+import React from 'react';
 import Sidebar from './components/Sidebar';
 import { Route, Routes } from "react-router-dom";
 import Accesslogs from './pages/Accesslogs';
@@ -11,6 +9,7 @@ import Startuplogs from './pages/Startuplogs';
 import Shutdownlogs from './pages/Shutdownlogs';
 import NgAccesslogs from './pages/NgAccesslogs';
 import NgErrorlogs from './pages/NgErrorlogs';
+import './App.css';
 
 function App() {
 

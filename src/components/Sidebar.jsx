@@ -5,7 +5,6 @@ function Sidebar() {
     const location = useLocation();
 
     const isActive = (pathname) => {
-        // Check if the current location matches the provided pathname
         return location.pathname === pathname;
     };
     return (
